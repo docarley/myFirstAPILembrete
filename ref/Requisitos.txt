@@ -1,0 +1,47 @@
+Criação de um Sistema CRUD de Anotações 
+
+O que ele fará? (Requisitos)
+	-Listar todas as anotações;
+	-Ver informações de uma anotação específica;
+	-Cadastrar anotação;
+	-Atualizar anotação;
+	-Excluir anotação;
+
+Qual a estrutura de dados? (Modelagem)
+	Anotacao (id, titulo, corpo)
+
+Quais os endpoints?
+	(metodos)   /url/<param>  
+
+	-(GET) /api/notes
+	-(GET) /api/note/123
+	-(POST) /api/note (param: titulo e corpo)
+	-(PUT) /api/note/123 (param: titulo e corpo)
+	-(DELETE) /api/note/123
+
+
+
+
+
+
+Notas:  /api/note/123   parametro 123 passado na url
+        /api/note (param: titulo e corpo) parametros passados via 		corpo
+	/api/get.php?id=123  parametro via querystring
+
+
+
+
+
+Quais os endpoints? TROCANDO para SEM OO
+	(metodos)   /url/<param>  
+
+-(GET) /api/notes --> /api/getall.php 
+-(GET) /api/note/123 --> /api/get.php?id=123 
+-(POST) /api/note (param: titulo e corpo) --> /api/insert.php (param:titulo e corpo)
+-(PUT) /api/note/123 (param: titulo e corpo) --> /api/update.php (param:id, titulo e corpo)
+-(DELETE) /api/note/123 --> /api/delete.php (param: id)
+
+
+
+
+
