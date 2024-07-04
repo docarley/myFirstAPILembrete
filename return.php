@@ -4,5 +4,6 @@ header("Access-Control-Allow-Origin: *"); //Para domínio específico só coloca
 header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT, OPTIONS"); //Para definir quais metodos podem ser enviados para a api o options e executado sempre antes do get nos bastidores.
 header("Content-Type: application/json"); //Informar o tipo de retorno Devemos pois apps sem esta informação apresentarao erros o navegador até se vira bem com isso
 
+
 echo json_encode($array);
 exit;

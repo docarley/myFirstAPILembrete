@@ -7,11 +7,13 @@ require('../config.php');
 // header("Access-Control-Allow-Methods: GET, POST, DELETE, PUT, OPTIONS"); //Para definir quais metodos podem ser enviados para a api o options e executado sempre antes do get nos bastidores.
 // header("Content-Type: application/json"); //Informar o tipo de retorno Devemos pois apps sem esta informação apresentarao erros o navegador até se vira bem com isso
 
-// $pdo = new PDO ('mysql:host='.$db_servidor.';dbname='.$db_banco,$db_usuario,$db_pwd);
+// $pdo = new PDO ('mysql:dbname='.$db_banco.';'.'host='.$db_servidor,$db_usuario,$db_pwd);
 
 // $array=[];
 
-$array['hello']='world';
+$array['result']=[
+    "hello"=>"world"  // chave valor no array associativo do PHP
+];
 
 require('../return.php');
 
