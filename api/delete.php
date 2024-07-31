@@ -14,7 +14,7 @@ if ($method === 'delete') {
     // $id = $_PUT["id"] ?? null;
     // $id = filter_var($id,FILTER_VALIDATE_INT);
 
-    if ($id && $titulo && $corpo) {
+    if ($id) {
 
         $sql = $pdo->prepare("SELECT * FROM Lembrete WHERE idLembrete=:id");
         $sql->bindValue(":id", $id);
@@ -27,6 +27,7 @@ if ($method === 'delete') {
             
             $sql->execute();
 
+            $array['result'] = "Lembrete excluído com sucesso!";
         } else {
             $array['error'] = "Id de lembrete não encontrado";
         }
