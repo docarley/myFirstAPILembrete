@@ -9,7 +9,7 @@ if ($method==='get') {
    
     if ($sql->rowCount()>0) {
         $data=$sql->fetchAll(PDO::FETCH_ASSOC);        
-        
+        // var_dump($data); // demonstrar como vem sem fetch_assoc apenas com ()
         foreach ($data as $item) {
             $array['result'][]=[
                 "id"=>$item['idLembrete'],

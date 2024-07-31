@@ -15,11 +15,12 @@ if ($method === 'post') {
 
         $id = $pdo->lastInsertId();
 
-        $array['result'][] = [
-            "id" => $id,
-            "tituloLembrete" => $titulo,
-            "corpoLembrete" => $corpo
-        ];
+        //Desafio
+        // $array['result'][] = [
+        //     "id" => $id,
+        //     "tituloLembrete" => $titulo,
+        //     "corpoLembrete" => $corpo
+        // ];
     } else {
         $array['error'] = "Erro - valores inválidos";        
     }
@@ -32,5 +33,8 @@ require('../return.php');
 /* Testar
 1-chamada com metodo errado
 2-chamar sem enviar parâmetro 
-3-retornar o objeto inserido --> desafio
+3-retornar o objeto inserido --> desafio 
+4-usar getall para ver o que foi inserido na lista
+5-usar get para ver apenas o que foi inserido
+6-mostrar no BD o que foi inserido via API
 */
